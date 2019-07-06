@@ -2254,8 +2254,6 @@ code {
   line-height: 1.7;
   color: #7a85b9;
   background-color: #0f111a;
-  white-space: pre-wrap;
-  counter-reset: line;
 }
 .code-highlight pre,
 .code-highlight code {
@@ -2319,7 +2317,6 @@ code {
   transform: translate(0, -100%);
 }
 .code-highlight .highlight table .gutter {
-  display: none;
   padding: 0 0.6rem;
   width: 1rem;
   background-color: #0f111a;
@@ -2334,15 +2331,6 @@ code {
 }
 .code-highlight .highlight .line {
   height: $line-height;
-}
-.code-highlight .highlight .line:before {
-  content: counter(line);
-  display: inline-block;
-  margin: 0 1rem 0 0;
-  width: 1rem;
-  text-align: right;
-  color: #7a85b9;
-  counter-increment: line;
 }
 .code-highlight pre .variable,
 .code-highlight pre .attribute {
