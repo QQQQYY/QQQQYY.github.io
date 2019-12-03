@@ -963,6 +963,11 @@ code {
 .main-content {
   margin: 0 auto;
 }
+.home-content,
+.main-content-layout,
+.main-content {
+  float: left;
+}
 .home-content {
   font-size: 16px;
 }
@@ -982,7 +987,7 @@ code {
 }
 .sidebar-inner.sticky {
   position: fixed;
-  top: 30px;
+  top: 20px;
 }
 .sidebar-inner .hide {
   display: none;
@@ -1012,8 +1017,8 @@ code {
   color: #fc6423;
 }
 .sidebar-toc {
-  white-space: nowrap;
-  word-break: normal;
+  white-space: normal;
+  word-break: break-all;
 }
 .sidebar-toc {
   overflow: auto;
@@ -1063,7 +1068,7 @@ code {
 }
 .sidebar-overview .sidebar-author-avatar {
   margin: 0 auto;
-  border-radius: 0;
+  border-radius: 50%;
   padding: 0;
   width: 150px;
   height: 150px;
@@ -1088,6 +1093,12 @@ code {
 .sidebar-overview .sidebar-state a,
 .sidebar-overview .sidebar-cc a {
   border-bottom: 0;
+}
+.sidebar-overview .sidebar-social:not(:last-child),
+.sidebar-overview .sidebar-feed:not(:last-child),
+.sidebar-overview .sidebar-state:not(:last-child),
+.sidebar-overview .sidebar-cc:not(:last-child) {
+  border-bottom: 1px dashed #e6e6e6;
 }
 .sidebar-overview .sidebar-social {
   display: -webkit-box;
@@ -1129,7 +1140,9 @@ code {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  background-color: #fff;
+  border-radius: 50%;
+  line-height: 1.5rem;
+  background-color: #a0daff;
 }
 .sidebar-overview .sidebar-social-item a {
   display: block;
@@ -1137,22 +1150,15 @@ code {
 .sidebar-overview .sidebar-social-item i {
   display: inline;
 }
+.sidebar-overview .sidebar-social-item:hover {
+  background-color: #64c2fe;
+}
 .sidebar-overview .sidebar-social-item a {
-  padding: 0 0.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .sidebar-overview .sidebar-social-item i,
 .sidebar-overview .sidebar-social-item span {
-  margin: 0 0.2rem;
-  color: #999;
-}
-.sidebar-overview .sidebar-social-item i {
-  width: 1.2rem;
-}
-.sidebar-overview .sidebar-social-item:hover {
-  background-color: #a0daff;
-}
-.sidebar-overview .sidebar-social-item:hover i,
-.sidebar-overview .sidebar-social-item:hover span {
   color: #fff;
 }
 .sidebar-overview .sidebar-feed {
@@ -1263,7 +1269,7 @@ code {
 .sidebar-progress-line {
   width: 0;
   height: 1px;
-  background-color: #49b1f5;
+  background-color: #fc6423;
 }
 .post-body #more {
   border: 0;
@@ -1272,6 +1278,8 @@ code {
   margin: 1rem 0 0;
   text-align: center;
   color: #b6b6b6;
+  border-top: 1px dashed #e6e6e6;
+  padding: 1rem 0 0;
 }
 .post-footer-end span {
   margin: 0 0.1rem;
@@ -1596,6 +1604,7 @@ code {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  background-image: url(" ");
 }
 #footer a {
   border-bottom: 0;
@@ -1830,12 +1839,12 @@ code {
 #recent-posts .sticky-top {
   position: absolute;
   top: 1rem;
-  -webkit-transform: scale(1.5) rotate();
-  -moz-transform: scale(1.5) rotate();
-  -o-transform: scale(1.5) rotate();
-  -ms-transform: scale(1.5) rotate();
-  transform: scale(1.5) rotate();
-  color: ;
+  -webkit-transform: scale(1.5) rotate(45deg);
+  -moz-transform: scale(1.5) rotate(45deg);
+  -o-transform: scale(1.5) rotate(45deg);
+  -ms-transform: scale(1.5) rotate(45deg);
+  transform: scale(1.5) rotate(45deg);
+  color: #999;
 }
 #recent-posts .post-btn {
   display: -webkit-box;
@@ -2114,15 +2123,15 @@ code {
   bottom: 5vh;
 }
 .back-top-inner {
-  -webkit-transform: rotate(0);
-  -moz-transform: rotate(0);
-  -o-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .back-top-inner i {
   font-size: 1.5rem;
-  color: #666;
+  color: #49b1f5;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
@@ -2130,112 +2139,112 @@ code {
   transition: color 0.2s;
 }
 .back-top-inner i:hover {
-  color: #999;
+  color: #fc6423;
   cursor: pointer;
 }
 .code-highlight figure.highlight.js table:before {
   content: 'js';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.javascript table:before {
   content: 'javascript';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.python table:before {
   content: 'python';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.ruby table:before {
   content: 'ruby';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.xml table:before {
   content: 'xml';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.html table:before {
   content: 'html';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.css table:before {
   content: 'css';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.perl table:before {
   content: 'perl';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.sql table:before {
   content: 'sql';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.coffeescript table:before {
   content: 'coffeescript';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.java table:before {
   content: 'java';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.scala table:before {
   content: 'scala';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.kotlin table:before {
   content: 'kotlin';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.c table:before {
   content: 'c';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.c\+\+ table:before {
   content: 'c\+\+';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.go table:before {
   content: 'go';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.less table:before {
   content: 'less';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.sass table:before {
   content: 'sass';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.scss table:before {
   content: 'scss';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.stylus table:before {
   content: 'stylus';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.styl table:before {
   content: 'styl';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.typescript table:before {
   content: 'typescript';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.ts table:before {
   content: 'ts';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.bash table:before {
   content: 'bash';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.yml table:before {
   content: 'yml';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight figure.highlight.gradle table:before {
   content: 'gradle';
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight pre,
 .code-highlight .highlight {
@@ -2243,8 +2252,8 @@ code {
   margin: 0.5rem 0;
   min-width: 100%;
   line-height: 1.7;
-  color: $highlight-color;
-  background-color: $highlight-background;
+  color: #7a85b9;
+  background-color: #0f111a;
 }
 .code-highlight pre,
 .code-highlight code {
@@ -2274,13 +2283,13 @@ code {
 }
 .code-highlight .highlight figcaption {
   overflow: hidden;
-  color: $highlight-header-color;
-  background-color: $highlight-header-bg-color;
+  color: #7a85b9;
+  background-color: #0f111a;
 }
 .code-highlight .highlight figcaption span {
   float: left;
   margin-left: 2.5rem;
-  color: $highlight-header-color;
+  color: #7a85b9;
 }
 .code-highlight .highlight figcaption a {
   float: right;
@@ -2310,11 +2319,11 @@ code {
 .code-highlight .highlight table .gutter {
   padding: 0 0.6rem;
   width: 1rem;
-  background-color: $highlight-gutter-bg-color;
+  background-color: #0f111a;
 }
 .code-highlight .highlight table .gutter pre {
   text-align: right;
-  color: $highlight-gutter-color;
+  color: #7a85b9;
   background-color: inherit;
 }
 .code-highlight .highlight table .code {
@@ -2325,7 +2334,7 @@ code {
 }
 .code-highlight pre .variable,
 .code-highlight pre .attribute {
-  color: $highlight-red;
+  color: #ff5370;
 }
 .code-highlight pre .number,
 .code-highlight pre .preprocessor,
@@ -2333,10 +2342,10 @@ code {
 .code-highlight pre .params,
 .code-highlight pre .constant,
 .code-highlight pre .command {
-  color: $highlight-orange;
+  color: #f78c6c;
 }
 .code-highlight pre .built_in {
-  color: $highlight-yellow;
+  color: #ffcb6b;
 }
 .code-highlight pre .special,
 .code-highlight pre .formula,
@@ -2347,18 +2356,18 @@ code {
 .code-highlight pre .header,
 .code-highlight pre .regexp,
 .code-highlight pre .tag {
-  color: $highlight-green;
+  color: #c3e88d;
 }
 .code-highlight pre .keyword,
 .code-highlight pre .title {
-  color: $highlight-aqua;
+  color: #89ddff;
 }
 .code-highlight pre .function,
 .code-highlight pre .title {
-  color: $highlight-blue;
+  color: #82aaff;
 }
 .code-highlight pre .comment {
-  color: $highlight-comment;
+  color: #98a4d0;
 }
 .code-highlight .ruby .constant,
 .code-highlight .xml .tag .title,
@@ -2369,17 +2378,17 @@ code {
 .code-highlight .tag .name,
 .code-highlight .css .class,
 .code-highlight .css .pseudo {
-  color: $highlight-red;
+  color: #ff5370;
 }
 .code-highlight .ruby .class .title,
 .code-highlight .css .rules .attribute,
 .code-highlight .ruby .symbol,
 .code-highlight .xml .cdata {
-  color: $highlight-green;
+  color: #c3e88d;
 }
 .code-highlight .css .hexcolor,
 .code-highlight .tag .string {
-  color: $highlight-aqua;
+  color: #89ddff;
 }
 .code-highlight .python .decorator,
 .code-highlight .python .title,
@@ -2389,20 +2398,20 @@ code {
 .code-highlight .javascript .title,
 .code-highlight .js .title,
 .code-highlight .coffeescript .title {
-  color: $highlight-blue;
+  color: #82aaff;
 }
 .code-highlight .tag .attr,
 .code-highlight .javascript .keyword,
 .code-highlight .javascript .function,
 .code-highlight .js .keyword,
 .code-highlight .js .function {
-  color: $highlight-purple;
+  color: #c792ea;
 }
 .code-highlight .diff .addition {
-  background-color: $highlight-addition;
+  background-color: #91f4a9;
 }
 .code-highlight .diff .deletion {
-  background-color: $highlight-deletion;
+  background-color: #ffb1ba;
 }
 .busuanzi .separator {
   margin: 0 0.3rem;
