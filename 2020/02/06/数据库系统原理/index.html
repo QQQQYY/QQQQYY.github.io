@@ -2,7 +2,7 @@
   back2top_animation: true,
   sidebar_offsetTop: '20px'
 };
-window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url(http://img.mp.itc.cn/upload/20170608/95f3e07d4113416c94081acd6268b294_th.jpg)"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-menu-icon fa fa-bars"></div><div class="header-nav-search"><i class="fa fa-search"></i><span>Search</span></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-categories"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-about"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">Possible'Blog</div><div class="site-info-subtitle">学习使我快乐，不学习浑身难受</div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库系统概述"><span class="toc-number">1.</span> <span class="toc-text">数据库系统概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据模型"><span class="toc-number">2.</span> <span class="toc-text">数据模型</span></a></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="http://img.mp.itc.cn/q_mini,c_zoom,w_640/upload/20161221/c495640d0fc24a91b9c95dc0d54b6002_th.jpeg" alt="avatar"></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">26</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">2</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">6</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">数据库系统原理</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2020-02-06</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2020-02-20</span></span><span class="post-meta-reading-count"><i class="fa fa-eye"></i><span>Visited </span><span id="busuanzi_value_page_pv"></span></span></div></div><div class="post-body"><h3 id="数据库系统概述"><a href="#数据库系统概述" class="headerlink" title="数据库系统概述"></a>数据库系统概述</h3><p><strong>数据</strong></p>
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url(http://img.mp.itc.cn/upload/20170608/95f3e07d4113416c94081acd6268b294_th.jpg)"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-menu-icon fa fa-bars"></div><div class="header-nav-search"><i class="fa fa-search"></i><span>Search</span></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-categories"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-about"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">Possible'Blog</div><div class="site-info-subtitle">学习使我快乐，不学习浑身难受</div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库系统概述"><span class="toc-number">1.</span> <span class="toc-text">数据库系统概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据模型"><span class="toc-number">2.</span> <span class="toc-text">数据模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库系统的结构"><span class="toc-number">3.</span> <span class="toc-text">数据库系统的结构</span></a></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="http://img.mp.itc.cn/q_mini,c_zoom,w_640/upload/20161221/c495640d0fc24a91b9c95dc0d54b6002_th.jpeg" alt="avatar"></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">26</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">2</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">6</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">数据库系统原理</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2020-02-06</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2020-02-20</span></span><span class="post-meta-reading-count"><i class="fa fa-eye"></i><span>Visited </span><span id="busuanzi_value_page_pv"></span></span></div></div><div class="post-body"><h3 id="数据库系统概述"><a href="#数据库系统概述" class="headerlink" title="数据库系统概述"></a>数据库系统概述</h3><p><strong>数据</strong></p>
 <p>概念：数据是用来记录信息的可识别的符号组合，是信息的具体表现形式。</p>
 <p>包括数字，字母，文字，特殊字符组成的文本数据，也可以是图形，动画，影像，声音等多媒体数据。</p>
 <p><strong>数据库</strong></p>
@@ -149,5 +149,82 @@ window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="hea
 <td align="center">…</td>
 </tr>
 </tbody></table>
-<p>（1）关系（<code>relation</code>）:一个关系对应通常说的一张表，例如上面所说的这张表。<br>（2）</p>
+<p>（1）关系（<code>relation</code>）:一个关系对应通常说的一张表，例如上面所说的这张表。<br>（2）元组（<code>tuple</code>）：表中的一行即为一个元组。<br>（3）属性（<code>atttribute</code>）：表中的一列即为一个属性，给每一个属性起一个名称即为属性名。上表中所示，有6个列，即有6个属性（学号，姓名，年龄，性别，系名，年级）；<br>（4）码（<code>key</code>）：也称为码键。表中某个属性组，它可以唯一确定一个元组。如表中的学号可以唯一确定一个学生，也就称为本关系的码。<br>（5）域（<code>domain</code>）：域是一组具有相同数据类型的值的集合。属性的取值范围来自某个域。如人的年龄一般在1~20之间等等。<br>（6）分量：元组中的一个属性值。<br>（7）关系模式：对关系的描述，一般表示为<code>关系名(属性1,属性2,...,属性n)</code></p>
+<p>关系模型要求关系必须规范化，即要求关系必须满足一定的规范条件。这些规范条件中最基本的一条是：关系的每一个分量必须是一个不可分的数据项；</p>
+<p>可以把关系和现实生活中的表格术语做一个粗略的对比：</p>
+<table>
+<thead>
+<tr>
+<th>关系术语</th>
+<th>一般表格术语</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>关系名</td>
+<td>表名</td>
+</tr>
+<tr>
+<td>关系模式</td>
+<td>表头（表格的描述）</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>（一个）二维表</td>
+</tr>
+<tr>
+<td>元组</td>
+<td>记录或行</td>
+</tr>
+<tr>
+<td>属性</td>
+<td>列</td>
+</tr>
+<tr>
+<td>属性名</td>
+<td>列名</td>
+</tr>
+<tr>
+<td>属性值</td>
+<td>列值</td>
+</tr>
+<tr>
+<td>分量</td>
+<td>一条记录中的一个列值</td>
+</tr>
+<tr>
+<td>非规范关系</td>
+<td>表中有表（大表中嵌套小表）</td>
+</tr>
+</tbody></table>
+<p><code>关系模型的数据操纵和完整性约束</code></p>
+<p>关系模型的数据操纵主要包括查询、插入、删除和更新数据，这些操作必须满足关系的完整性约束条件。关系的完整性约束条件包括三大类：实体完整性、参照完整性和用户自定义的完整性。</p>
+<p>关系模型把存取路径向用户屏蔽起来，用户只要指出“干什么”或“找什么”，不必要详细说明“怎么干”或“怎么找”，从而大大提高了数据的独立性，提高了用户的生产率。</p>
+<p><code>关系模型的优缺点</code></p>
+<p>关系模型的优点：<br>（1）关系模型与格式化模型不同，它是建立在严格的数学概念的基础上。<br>（2）关系模型的概念单一。无论是实体还是实体之间的联系都是用关系来表示，对数据的检索和更新结果也是关系（即表）。所以其数据结构简单、清晰、易懂易用。<br>（3）关系模型的存取路径对用户透明，从而具有较高的数据独立性、更好的安全保密性，也简化了程序员对工作和数据库开发建立的工作。</p>
+<p>关系模型的缺点：<br>（1）由于存取路径对用户透明，查询效率往往不如格式化数据模型。<br>（2）为了提高性能，数据库管理系统必须对用户的查询请求进行优化，因此增加了开发数据库管理系统的难度。<br>（3）硬件开销。关系数据模型需要更高效的计算机硬件和物理存储设备来完成RDBMS安排的任务。因此，它们可能比其他系统更慢。但是随着计算机技术和更高效的操作系统的快速开发，速度慢已不成为问题。<br>（4）容易设计出不合理或性能低下的数据库。关系数据库易于使用特点，容易导致未经过严格训练的人员在没有充分理解和深入思考的情况下，设计出不合理的或性能低下的数据库从而导致系统更慢，性能下降和数据不可靠。</p>
+<p>不过用户不必考虑这些系统内部的优化技术细节。</p>
+<h3 id="数据库系统的结构"><a href="#数据库系统的结构" class="headerlink" title="数据库系统的结构"></a>数据库系统的结构</h3><p>数据库系统的内部体系结构：三级模式结构（从数据库管理系统角度看）<br>数据库系统的外部体系结构：单用户结构、主从式结构、分布式结构、客户机/服务器结构、浏览器-应用服务器/数据库服务器多层结构等（从数据库系统的最终用户角度看）</p>
+<p><strong>数据库系统模式的概念</strong></p>
+<p>在数据模型中有<code>型</code>和<code>值</code>的概念。</p>
+<p>型是针对某一类数据的结构和属性的说明，值是型的一个具体赋值。</p>
+<p>例如：学生（学号，姓名，性别，年龄，系名，籍贯）为一个记录型，（2013262<br>0，李明，男，19，计算机系，江苏南京市）则该记录的一个值。</p>
+<p>模式（<code>Schema</code>）是数据库全体数据的逻辑结构和特征的描述，它仅仅涉及型的描述，不涉及具体的值。</p>
+<p>模式的一个具体值称为模式的一个实例（<code>instance</code>）</p>
+<p>模式是相对稳定的，而实例是相对变动的，因为数据库中的数据是不断更新的。模式反映的是数据的结构及其联系，而实例反映的是数据库某一时刻的状态。</p>
+<p><strong>数据库系统的三级模式结构</strong></p>
+<p>数据库系统的三级模式结构是指数据库系统是由外模式、模式和内模式三级构成。</p>
+<p><code>模式(schema)</code></p>
+<p>模式也称为逻辑模式，是数据库全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。</p>
+<p>模式实际上数据在逻辑层上的视图。一个数据库只有一个模式。</p>
+<p>定义模式时不仅要定义数据的逻辑结构，例如数据记录由哪些数据项构成，数据项名称，类型与取值范围，还要定义数据之间的联系，定义与数据有关的安全性要求和完整性要求。</p>
+<p>数据库管理系统提供模式数据描述语言（<code>模式DDL</code>）来严格定义模式。</p>
+<p><code>外模式（extern schema）</code></p>
+<p>外模式也称为用户模式或子模式，是数据库在视图层上的数据视图，是所有数据库用户所能看到使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用有关的数据的逻辑表示。</p>
+<p>外模式通常是模式的子集，一个数据库可以有多个外模式，因为不同用户有不同的需求，以及拥有不同的访问权限，因此，对不同的用户提供不同的外模式的描述，即每一个用户只能看到和访问所对应的外模式的描述。另外，一个外模式可以为多个应用程序使用，但一个应用程序只能有一个外模式。</p>
+<p>外模式是保证数据库安全性的一个有力措施。</p>
+<p>数据库管理系统提供外模式数据描述语言（<code>外模式DDL</code>）来严格定义外模式。</p>
+<p><code>内模式(internal schema)</code></p>
+<p>内模式也称为存储模式，一个数据库只有一个内模式，它是对数据库物理结构和存储方式的描述，是数据在数据库内部的组织形式。</p>
+<p>数据管理系统提供内模式数据描述语言（<code>内模式DDL</code>）来严格定义内模式。</p>
+<p><strong>数据库的二级映像功能与数据独立性</strong></p>
 </div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://qqqqyy.github.io">chuli</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://qqqqyy.github.io/2020/02/06/数据库系统原理/">http://qqqqyy.github.io/2020/02/06/数据库系统原理/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-footer-tags"><i class="fa fa-tags icon"></i><span><a href="http://qqqqyy.github.io/tags/数据库系统原理/" title="数据库系统原理">数据库系统原理</a></span></div><nav id="paginator"><div class="post-paginator"><div class="article-next pull-right"><a href="/2020/02/06/hello-world/"><span class="title">Hello World</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2020</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>chuli.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.0.2.</span></div><div class="busuanzi"><script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js"></script><span class="busuanzi-uv"><i class="fa fa-user"></i><span>Visitors </span><span id="busuanzi_value_site_uv"></span></span><span class="separator">|</span><span class="busuanzi-pv"><i class="fa fa-eye"></i><span>Views </span><span id="busuanzi_value_site_pv"></span></span></div></div></footer><div id="back-top"><div class="back-top-inner" title="Back to top"><i class="fa fa-rocket"></i></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="/js/utils.js?v=1.0.2"></script><script src="/js/scroll.js?v=1.0.2"></script><script src="/js/header.js?v=1.0.2"></script><script src="/js/sidebar.js?v=1.0.2"></script><script src="/js/post.js?v=1.0.2"></script></body></html>
