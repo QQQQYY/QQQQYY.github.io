@@ -1,0 +1,164 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="chuli, Possible'Blog"><meta name="author" content="chuli"><meta name="description" content="Java程序设计"><meta name="copyright" content="chuli"><title>Java程序设计 | Possible'Blog</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.0.2"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.0.2"><link rel="icon" type="image/png" sizes="16x16" href="http://img.mp.itc.cn/q_mini,c_zoom,w_640/upload/20161221/c495640d0fc24a91b9c95dc0d54b6002_th.jpeg?v=1.0.2"><script>let CONFIG = {
+  back2top_animation: true,
+  sidebar_offsetTop: '20px'
+};
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url(http://img.mp.itc.cn/upload/20170608/95f3e07d4113416c94081acd6268b294_th.jpg)"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-menu-icon fa fa-bars"></div><div class="header-nav-search"><i class="fa fa-search"></i><span>搜索</span></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>首页</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>归档</a></span><span><a href="/categories/"><i class="fa fa-categories"></i>分类</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>标签</a></span><span><a href="/about/"><i class="fa fa-about"></i>关于</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">Possible'Blog</div><div class="site-info-subtitle">学习使我快乐，不学习浑身难受</div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-overview">站点概览</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java语言概述与开发环境"><span class="toc-number">1.</span> <span class="toc-text">Java语言概述与开发环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java语言的发展简史"><span class="toc-number">1.1.</span> <span class="toc-text">Java语言的发展简史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java程序运行机制"><span class="toc-number">1.2.</span> <span class="toc-text">Java程序运行机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发Java的准备"><span class="toc-number">1.3.</span> <span class="toc-text">开发Java的准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一个Java程序"><span class="toc-number">1.4.</span> <span class="toc-text">第一个Java程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java程序的基本规则"><span class="toc-number">1.5.</span> <span class="toc-text">Java程序的基本规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#交互式工具-jshell"><span class="toc-number">1.6.</span> <span class="toc-text">交互式工具 jshell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java11改进的垃圾回收器"><span class="toc-number">1.7.</span> <span class="toc-text">Java11改进的垃圾回收器</span></a></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="http://img.mp.itc.cn/q_mini,c_zoom,w_640/upload/20161221/c495640d0fc24a91b9c95dc0d54b6002_th.jpeg" alt="avatar"></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">22</div><div class="sidebar-state-item-name">文章</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">1</div><div class="sidebar-state-item-name">分类</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">3</div><div class="sidebar-state-item-name">标签</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>你已阅读了</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Java程序设计</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2020-07-03</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2020-07-03</span></span><span class="post-meta-reading-count"><i class="fa fa-eye"></i><span>阅读次数 </span><span id="busuanzi_value_page_pv"></span></span></div></div><div class="post-body"><h2 id="Java语言概述与开发环境"><a href="#Java语言概述与开发环境" class="headerlink" title="Java语言概述与开发环境"></a>Java语言概述与开发环境</h2><h3 id="Java语言的发展简史"><a href="#Java语言的发展简史" class="headerlink" title="Java语言的发展简史"></a>Java语言的发展简史</h3><p><strong>JDK1.0：1995年</strong> </p>
+<p>JDK1.0：包括两部分：JRE（运行环境）和JDK（开发环境）。</p>
+<p>JDK：Java Development Kit；</p>
+<p>JRE：Java Runtime Environment；</p>
+<p>运行环境：包括核心API、集成API、用户界面API、发布技术和Java虚拟机（JVM）5个部分。</p>
+<p>开发环境：包括编译Java程序的编译器（即javac命令）。</p>
+<p><strong>JDK1.1：1997年</strong></p>
+<p>JIT：（即时编译）编译器。</p>
+<p><strong>JDK1.2：1998年</strong></p>
+<p>出现了JSP/Servlet、EJB规范、并将Java分成了J2SE、J2EE、J2ME</p>
+<p>核心API、可选API、特殊API</p>
+<p><strong>JDK1.4：2002年</strong></p>
+<p>出现了大量基于Java语言开源框架：Struts、Hibernate、Spring、WebWork等。</p>
+<p>出现了企业应用服务器：WebLogic、WebSphere、JBoss等。</p>
+<p><strong>JDK1.5（JDK5.0）：2004年</strong></p>
+<p>JDK1.5改为JDK5.0</p>
+<p>J2SE 改为 JavaSE</p>
+<p>J2EE 改为 JavaEE</p>
+<p><strong>JDK1.6（JDK6.0）：2006年</strong></p>
+<p><strong>JDK7：2011年</strong></p>
+<p>oracle发布，引入了二进制整数、支持字符串的<code>switch</code>语句、菱形语法、多异常捕获、自动关闭资源的try语句等新特性。</p>
+<p><strong>JDK8：2014年</strong></p>
+<p>新特性：</p>
+<ul>
+<li>Lambda表达式</li>
+<li>流式编程</li>
+</ul>
+<p><strong>JDK9：2017年</strong></p>
+<p>新特性：</p>
+<ul>
+<li>Java的模块化系统</li>
+<li>更高效、更智能的G1垃圾回收器</li>
+</ul>
+<p><strong>JDK10：2018年</strong></p>
+<p><strong>JDK11：2018年</strong></p>
+<p>JDK9、JDK10属于功能性版本、oracle都仅提供半年的技术支持。</p>
+<p>JDK8、JDK11属于LTS（长期支持版本）。</p>
+<p>此外：oracle还约定每三年发布一个LTS版本。</p>
+<h3 id="Java程序运行机制"><a href="#Java程序运行机制" class="headerlink" title="Java程序运行机制"></a>Java程序运行机制</h3><p>Java语言是一种特殊的语言，它既有解释型语言的特性，也具有编译型语言的特性，因为Java程序要经过先编译、后解释两个部分。</p>
+<p><strong>高级语言的运行机制</strong></p>
+<p>计算机高级语言按程序的执行方式可以分为编译型和解释型两种。</p>
+<p>编译型语言：编译型语言是指使用专门的编译器，针对特定平台（操作系统）将某种高级语言源代码一次性“编译”成该平台硬件执行的机器码（包括机器指令和操作数），并包装成该平台所能识别的可执行程序的格式，这个转换过程称为“<code>编译（Compile）</code>”.编译生成的可执行性代码可以脱离开发环境，在特定的平台上独立的运行。</p>
+<p>解释型语言：解释型语言是指使用专门的解释器对源程序逐行解释成特定平台支持的机器码。解释型语言通常不会进行整体性的编译和链接处理，解释型语言相当于把编译型语言中的编译和解释过程混合到一起同时完成。</p>
+<p><strong>Java程序的运行机制和JVM</strong></p>
+<p>执行Java程序的两个步骤：</p>
+<p><img src="https://i.loli.net/2020/06/24/mAe4tcQr2DGihdB.png" alt="1593001119_1_.png"></p>
+<p>Java语言里负责解释执行字节码文件的是Java虚拟机，即<code>JVM</code>(<code>Java Virtual Machine</code>)。</p>
+<p>JVM是一个抽象的计算机，和实际的计算机一样。它具有指令集并使用不同的存储区域。他负责执行指令，还要管理数据、内存和寄存器。</p>
+<p>Oracle公司指定的Java虚拟机规范在技术上规范了JVM的统一标准，具体定义了JVM的如下细节：</p>
+<ul>
+<li>指令集</li>
+<li>寄存器</li>
+<li>栈</li>
+<li>存储区</li>
+<li>垃圾回收堆</li>
+<li>类文件的格式</li>
+</ul>
+<p>Oracle公司指定这些规范的目的是为了提供统一的标准，最终实现Java程序的平台无关性。</p>
+<h3 id="开发Java的准备"><a href="#开发Java的准备" class="headerlink" title="开发Java的准备"></a>开发Java的准备</h3><p>在开发Java程序之前，需要先完成一些准备工作，也就是在计算机上安装并配置Java开发环境，开发Java程序需要安装和配置JDK。</p>
+<p><strong>下载和安装 Java 11的JDK</strong></p>
+<p><code>JDK</code>的全称是<code>Java SE Development Kit</code>，即Java标准版开发包。它是由Oracle提供的一套用于开发Java应用程序的开发包，它提供了编译、运行Java应用程序所需要的工具和资源，包括Java编译器、Java运行时环境。以及常用的Java类库等。</p>
+<p>这里有涉及到一个概念：Java运行时环境，它的全称是<code>Java Runtime Environment</code>，因此也称为<code>JRE</code>，它是运行Java程序的必要条件。</p>
+<p>下载和安装JDK的步骤如下</p>
+<ul>
+<li>登录<code>http://www.oracle.com/technetwork/java/javase/downloads/index.html</code>，选择<code>JDK11.0.3</code>的版本进行下载。</li>
+<li>读者要根据自己的平台选择合适的JDK版本，对于Windows平台，JDK11默认只为64位的Windows系统提供JDK，对于Linux平台，则下载Linux平台的JDK。</li>
+<li>64位Windows系统的JDK下载成功后，得到一个<code>jdk-11.0.3_windows-x64_bin.exe</code>文件，这是一个标准的EXE文件，可以通过双击该文件来运行安装程序。对于Linux平台上的JDK安装文件，只需要为该文件添加可执行的属性即可，然后执行该安装文件即可。</li>
+</ul>
+<p>安装完成后，可以在JDK的安装目录下看到如下的文件路径：</p>
+<ul>
+<li>bin:该路径下存放了JDK的各种工具命令，常用的javac、java等命令就放在该路径下。</li>
+<li>conf:该路径下存放了JDK的相关配置文件。</li>
+<li>include:存放一些平台特定的头文件。</li>
+<li>jmods:该路径下存放了JDK的各种模块。</li>
+<li>legal:该目录下存放了JDK各模块的授权文档。</li>
+<li>lib:该路径下存放的是JDK工具的一些补充jar包。比如src.zip文件中保存了Java的源代码。</li>
+<li>README和COPYRIGHT等说明性文档。</li>
+</ul>
+<p><strong>设置PATH环境变量</strong></p>
+<p>不管是Windows平台还是linux平台，只需要把java和javac两个命令所在的路径添加到PATH环境变量中，就可以编译和运行Java程序了。</p>
+<p>在Windows平台设置环境变量</p>
+<ol>
+<li>参考<code>https://blog.csdn.net/weixin_40928253/article/details/83590136</code>网址。</li>
+</ol>
+<p>在Linux上设置环境变量</p>
+<ol>
+<li>参考<code>https://blog.csdn.net/qq_34553193/article/details/90298088</code>网址。</li>
+</ol>
+<h3 id="第一个Java程序"><a href="#第一个Java程序" class="headerlink" title="第一个Java程序"></a>第一个Java程序</h3><p><strong>编写Java源代码</strong></p>
+<p>编写Java源代码可以用无任何格式的文本编辑器。在Windows操作系统上可以使用记事本（NotePad）、EditPlus程序，在Linux平台上可以使用VI。</p>
+<p>用EditPlus文本编辑器编写Java代码，并且以<code>.java</code>的格式存放，此时该文件为Java程序的源程序，该源程序的内容如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">	<span class="comment">//Java程序的入口方法，程序从这里开始执行</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="comment">//向控制台打印输出一条语句</span></span><br><span class="line">		System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：在编写Java程序时，要严格区分大小写，如<code>public</code>、<code>class</code>、<code>System</code>；</p>
+<p>编写好Java程序的源代码之后，接下来应该编译Java源文件生成字节码文件。</p>
+<p><strong>编译Java程序</strong></p>
+<p>编写Java程序需要使用<code>javac</code>命令。例如：</p>
+<p><code>javac -d destDir srcFile</code></p>
+<p>在上面命令中，-d destDir是javac命令的选项，用于将生成的字节码文件存放到指定的位置下，destDir只需是本地磁盘上的一个有效路径即可。而srcFile是Java源程序文件所在的位置，这个位置既可以是相对路径，也可以是绝对路径。</p>
+<p>测试上面的源程序文件：<code>javac -d . HelloWorld.java</code></p>
+<p><strong>运行Java程序</strong></p>
+<p>运行Java程序需要使用<code>java</code>命令。例如：</p>
+<p><code>java Java 类名</code></p>
+<p>值得注意的是：java命令后的参数是Java类名，而不是字节码文件的文件名，也不是Java源文件名。</p>
+<p>运行上面的Java程序：<code>java HelloWorld</code></p>
+<p><strong>根据CLASSPATH环境变量定位类</strong></p>
+<p>CLASSPATH环境变量的作用：当使用<code>java Java类名</code>来运行Java时，指定JRE到哪搜索Java类。</p>
+<p>如果想要在运行Java程序临时指定搜索路径，可以使用</p>
+<p><code>java -classpath dir1;dir2;...;dirn Java类名</code></p>
+<p>如果在运行时指定了-classpath，则将严格按照所指定的路径进行搜索Java类，即不会在当前路径下搜索Java类，在环境变量CLASSPATH中所指定的搜索路径也失效。</p>
+<p>如果想要当前路径以及CLASSPATH所指定的路径依然有效，则需要按照如下格式进行：</p>
+<p><code>java -classpath .;%CLASSPATH%;dir1,dir2;...;dirN Java类名</code></p>
+<p><code>.</code>代表当全路径，%CLASSPATH%表示引用CLASSPATH变量的值，强制JRE在指定路径下搜索。</p>
+<h3 id="Java程序的基本规则"><a href="#Java程序的基本规则" class="headerlink" title="Java程序的基本规则"></a>Java程序的基本规则</h3><p><strong>Java程序的组织形式</strong></p>
+<p>类(class)是Java程序的最小组成单位。</p>
+<p>Java解释器规定：如果想要某个类被解释器直接解释执行，则这个类型必须包含main方法，而且main方法必须被<code>public static</code>修饰，main方法的形式参数必须为字符串数组类型（如：<code>String[] args</code>）。</p>
+<p><strong>Java源文件的命名规则</strong></p>
+<p>Java程序源文件的命名不是随意的，Java文件的命名必须满足如下规则:</p>
+<ul>
+<li>Java源程序的扩展名必须是<code>.java</code>，不是能其它文件扩展名。</li>
+<li>在通常情况下，Java程序源文件的主文件名可以是任意的，但有一种情况例外：如果Java程序源文件内定义了一个public类，则源程序文件的主文件名必须与该public类（也就是该类定义时使用了public关键字修饰）的类名相同。</li>
+</ul>
+<p>由于Java源程序文件的文件名必须和public类一致，所以一个Java源程序文件里最多只能定义一个public类。</p>
+<p><strong>初学者容易犯的错误</strong></p>
+<ol>
+<li>CLASSPATH环境变量的问题</li>
+<li>大小写问题</li>
+<li>路径里包含空格的问题</li>
+<li>main方法的问题</li>
+</ol>
+<h3 id="交互式工具-jshell"><a href="#交互式工具-jshell" class="headerlink" title="交互式工具 jshell"></a>交互式工具 jshell</h3><p>从JDK9开始，JDK内置了一个强大的交互式工具：jshell。它是一个REPL(<code>Read-Eval-Print Loop</code>)工具，该工具是一个交互式的命令行界面，可以用于执行Java语言的表达式、语句和变量声明，而且可以立即看到执行结果。</p>
+<p>在cmd中直接输入jshell即可打开交互式的命令行界面。jshell常用的命令如下：</p>
+<ul>
+<li><code>/help</code>：输出帮助信息</li>
+<li><code>/exit</code>：退出jshell界面</li>
+<li><code>/list</code>：列出用户输入的所有源代码</li>
+<li><code>/edit</code>：编辑用户输入的第几条源代码</li>
+<li><code>/drop</code>：删除用户输入的第几条源代码</li>
+<li><code>/save</code>：保存用户输入的源代码</li>
+<li><code>/vars</code>：列出用户定义的所有变量</li>
+<li><code>/methods</code>：列出用户定义的所有方法</li>
+<li><code>types</code>：列出用户定义的所有类型</li>
+</ul>
+<h3 id="Java11改进的垃圾回收器"><a href="#Java11改进的垃圾回收器" class="headerlink" title="Java11改进的垃圾回收器"></a>Java11改进的垃圾回收器</h3><p>如果一些分配出去的内存得不到及时回收，就会导致系统运行速度下降，甚至导致程序瘫痪，这种现象被称为内存泄漏。</p>
+<p>显示进行垃圾回收主要有如下两个缺点：</p>
+<ul>
+<li>程序忘记及时回收无用内存，从而导致内存泄漏，降低系统性能。</li>
+<li>程序错误的回收程序核心类库的内存，从而导致系统崩溃。</li>
+</ul>
+<p>Java语言不需要程序员直接控制内存回收，Java程序的内存分配和回收都是JRE在后台进行的。</p>
+<p>JRE会负责回收那些不再使用的内存，这种机制被称为垃圾回收（Garbage Collection,GC）。</p>
+<p>Java的堆内存是一个运行时数据区，用以保存类的实例（对象）。</p>
+<p>垃圾回收是一种动态存储管理技术，它自动释放不再被程序引用的对象，按照特定的垃圾回收算法来实现内存资源的自动回收功能。</p>
+<p>在<code>C/C++</code>中，对象所占的内存不会被自动释放，如果程序没有显示释放对象所占用的内存，对象所占用的内存就不能分配给其他对象，该内存在程序运行结束之前一直被占用；而在Java中，当没有引用变量指向原先分配给某个对象的内存，该内存便成为了垃圾。JVM的一个超级线程会自动释放该内存区。垃圾回收意味着程序不再需要的对象是“垃圾信息”，这些信息将被丢弃。</p>
+<p>垃圾回收能自动释放内存空间，减轻编程的负担。这使得Java虚拟机具有两个显著的优点：</p>
+<ul>
+<li>垃圾回收机制可以很好地提高编程效率。在没有垃圾回收机制时，可能要花费许多时间来解决一个难懂的存储器问题。在用Java语言编程时，依靠垃圾回收机制可以大大缩短时间。</li>
+<li>垃圾回收机制保护程序的完整性，垃圾回收是Java语言安全性策略的一个重要部分。</li>
+</ul>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>本文结束，感谢您的阅读</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">本文作者:</span><span class="copyright-value"><a href="http://qqqqyy.github.io">chuli</a></span></div><div class="copyright-link"><span class="copyright-name">本文链接:</span><span class="copyright-value"><a href="http://qqqqyy.github.io/2020/07/03/Java程序设计/">http://qqqqyy.github.io/2020/07/03/Java程序设计/</a></span></div><div class="copyright-notice"><span class="copyright-name">版权声明:</span><span class="copyright-value">本博客所有文章除特别声明外，均采用  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-footer-tags"><i class="fa fa-tags icon"></i><span><a href="http://qqqqyy.github.io/tags/Java程序设计/" title="Java程序设计">Java程序设计</a></span></div><nav id="paginator"><div class="post-paginator"><div class="article-next pull-right"><a href="/2020/02/06/数据库系统原理/"><span class="title">数据库系统原理</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2020</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>chuli.</span></div><div><span class="footer-powered">由 <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a> 强力驱动</span><span> v3.9.0.</span><span class="footer-separator">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.0.2.</span></div><div class="busuanzi"><script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js"></script><span class="busuanzi-uv"><i class="fa fa-user"></i><span>访问人数 </span><span id="busuanzi_value_site_uv"></span></span><span class="separator">|</span><span class="busuanzi-pv"><i class="fa fa-eye"></i><span>浏览总量 </span><span id="busuanzi_value_site_pv"></span></span></div></div></footer><div id="back-top"><div class="back-top-inner" title="回到顶部"><i class="fa fa-rocket"></i></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="/js/utils.js?v=1.0.2"></script><script src="/js/scroll.js?v=1.0.2"></script><script src="/js/header.js?v=1.0.2"></script><script src="/js/sidebar.js?v=1.0.2"></script><script src="/js/post.js?v=1.0.2"></script></body></html>
