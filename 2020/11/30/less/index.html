@@ -1,0 +1,515 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="chuli, Possible'Blog"><meta name="author" content="chuli"><meta name="description" content="less"><meta name="copyright" content="chuli"><title>less | Possible'Blog</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.0.2"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.0.2"><link rel="icon" type="image/png" sizes="16x16" href="http://img.mp.itc.cn/q_mini,c_zoom,w_640/upload/20161221/c495640d0fc24a91b9c95dc0d54b6002_th.jpeg?v=1.0.2"><script>let CONFIG = {
+  back2top_animation: true,
+  sidebar_offsetTop: '20px'
+};
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url(http://img.mp.itc.cn/upload/20170608/95f3e07d4113416c94081acd6268b294_th.jpg)"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-menu-icon fa fa-bars"></div><div class="header-nav-search"><i class="fa fa-search"></i><span>搜索</span></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>首页</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>归档</a></span><span><a href="/categories/"><i class="fa fa-categories"></i>分类</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>标签</a></span><span><a href="/about/"><i class="fa fa-about"></i>关于</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">Possible'Blog</div><div class="site-info-subtitle">学习使我快乐，不学习浑身难受</div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-overview">站点概览</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初见LESS"><span class="toc-number">1.</span> <span class="toc-text">初见LESS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正确使用less"><span class="toc-number">2.</span> <span class="toc-text">正确使用less</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量（variables）"><span class="toc-number">3.</span> <span class="toc-text">变量（variables）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mixins"><span class="toc-number">4.</span> <span class="toc-text">Mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#嵌套规则（nested-rules）"><span class="toc-number">5.</span> <span class="toc-text">嵌套规则（nested-rules）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算（operations）"><span class="toc-number">6.</span> <span class="toc-text">运算（operations）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数（functions）"><span class="toc-number">7.</span> <span class="toc-text">函数（functions）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命名空间"><span class="toc-number">8.</span> <span class="toc-text">命名空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作用域"><span class="toc-number">9.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引入（important）"><span class="toc-number">10.</span> <span class="toc-text">引入（important）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字（important）"><span class="toc-number">11.</span> <span class="toc-text">关键字（important）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件表达式"><span class="toc-number">12.</span> <span class="toc-text">条件表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">13.</span> <span class="toc-text">循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#合并属性"><span class="toc-number">14.</span> <span class="toc-text">合并属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数库"><span class="toc-number">15.</span> <span class="toc-text">函数库</span></a></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="http://img.mp.itc.cn/q_mini,c_zoom,w_640/upload/20161221/c495640d0fc24a91b9c95dc0d54b6002_th.jpeg" alt="avatar"></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">26</div><div class="sidebar-state-item-name">文章</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">1</div><div class="sidebar-state-item-name">分类</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">6</div><div class="sidebar-state-item-name">标签</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>你已阅读了</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">less</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2020-11-30</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2020-11-30</span></span><span class="post-meta-reading-count"><i class="fa fa-eye"></i><span>阅读次数 </span><span id="busuanzi_value_page_pv"></span></span></div></div><div class="post-body"><h3 id="初见LESS"><a href="#初见LESS" class="headerlink" title="初见LESS"></a>初见LESS</h3><ol>
+<li><p>简介：Less是一门CSS预处理语言，它扩展了CSS语言，增加了变量，混合，函数和许多其他技术，让CSS更具有维护性、主题性和可扩展性</p>
+</li>
+<li><p>LESS官方网站：</p>
+<ul>
+<li>英文：<a href="http://www.lesscss.org/" target="_blank" rel="noopener">http://www.lesscss.org/</a></li>
+<li>中文：<a href="http://www.lesscss.cn/" target="_blank" rel="noopener">http://www.lesscss.cn/</a></li>
+</ul>
+</li>
+<li><p>与less的第一次碰面</p>
+</li>
+</ol>
+<ul>
+<li><strong>传统写法</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span> <span class="selector-tag">ul</span>&#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>:<span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1605683981901&amp;di=09c5d2450b33bc4981930ce9bfd09ec1&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.51miz.com%2FElement%2F00%2F73%2F49%2F43%2F4875381d_E734943_7a040cae.jpg%2521%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue%2Fformat%2Fjpg"</span>) no-repeat left center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">color</span>:<span class="number">#535353</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: microsoft yahel <span class="string">"黑体"</span>，Arial,Simsun,<span class="string">"Arial Unicode MS"</span>,Mingliu,Helvetica;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>LESS写法</strong></li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    <span class="selector-class">.content</span>&#123;</span><br><span class="line">        <span class="selector-tag">ul</span>&#123;</span><br><span class="line">            <span class="attribute">list-style</span>: none;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">li</span>&#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">            <span class="attribute">line-height</span>: <span class="number">25px</span>;</span><br><span class="line">            <span class="attribute">padding-left</span>:<span class="number">15px</span>;</span><br><span class="line">            <span class="attribute">background</span>:url(<span class="string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1605683981901&amp;di=09c5d2450b33bc4981930ce9bfd09ec1&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.51miz.com%2FElement%2F00%2F73%2F49%2F43%2F4875381d_E734943_7a040cae.jpg%2521%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue%2Fformat%2Fjpg"</span>) no-repeat left center;</span><br><span class="line">        <span class="selector-tag">a</span>&#123;</span><br><span class="line">            <span class="attribute">text-decoration</span>: none;</span><br><span class="line">            <span class="attribute">color</span>:<span class="number">#535353</span>;</span><br><span class="line">            <span class="attribute">font-family</span>: microsoft yahel <span class="string">"黑体"</span>，Arial,Simsun,<span class="string">"Arial Unicode MS"</span>,Mingliu,Helvetica;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>Less中的注释：</p>
+<ul>
+<li><code>//</code>： 以<code>//</code>开始的注释，不会被编译到css文件中</li>
+<li><code>/**/</code>：以<code>/**/</code>包裹的注释会被编译在css的文件中</li>
+</ul>
+</li>
+</ol>
+<h3 id="正确使用less"><a href="#正确使用less" class="headerlink" title="正确使用less"></a>正确使用less</h3><ol>
+<li><p>如何正确使用less：less文件只有在被编译后才能够被浏览器识别使用</p>
+</li>
+<li><p>less编译工具</p>
+<ul>
+<li>Koala：国人开发的全平台的LESS编译工具。</li>
+<li>WinLess：Windows下的LESS编译软件</li>
+<li>CodeKit：MAC平台下的LESS编译软件</li>
+</ul>
+</li>
+<li><p>客户端调试方式</p>
+<ul>
+<li>首先引用<code>.less</code>文件：注意引用时使用link引入，然后将rel属性设置为<code>rel=&quot;stylesheet/less&quot;</code></li>
+<li>然后引用<code>less.js</code>：注意：引入普通js引入方式一致，但是一定要放在less样式文件之后</li>
+</ul>
+</li>
+</ol>
+<h3 id="变量（variables）"><a href="#变量（variables）" class="headerlink" title="变量（variables）"></a>变量（<code>variables</code>）</h3><ol>
+<li><p>普通的变量</p>
+<ul>
+<li>变量的定义方式 <code>@</code></li>
+<li>由于变量只能使用一次，实际上他们就是”常量“</li>
+<li>实例：</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//less编写</span></span><br><span class="line"><span class="variable">@green:</span>green;</span><br><span class="line"><span class="variable">@babel:</span>white;</span><br><span class="line"><span class="selector-tag">header</span>,<span class="selector-tag">footer</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>:<span class="variable">@green</span>;</span><br><span class="line">  <span class="selector-tag">h2</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:<span class="variable">@babel</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-tag">header</span>,<span class="selector-tag">footer</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>:green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">header</span>,<span class="selector-tag">footer</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:white</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li><p>作为选择器和属性名</p>
+<ul>
+<li>使用时变量以@{变量名}的方式使用</li>
+<li>实例</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@mySelect:</span>width;</span><br><span class="line"><span class="selector-class">.@&#123;mySelect&#125;</span>&#123;</span><br><span class="line">    <span class="variable">@mySelect:</span><span class="number">960px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">500px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后结果*/</span></span><br><span class="line"><span class="selector-class">.width</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">960px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">500px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>作为URL</p>
+<ul>
+<li>使用时，使用<code>&quot;&quot;</code>将变量的值括起来，使用时同样将变量以@{变量名}的方式使用</li>
+<li>实例</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//less编写</span></span><br><span class="line"><span class="variable">@myUrl:</span> <span class="string">"http://www.baidu.com/img"</span></span><br><span class="line">body&#123;</span><br><span class="line">    <span class="attribute">background</span>:url(<span class="string">"@&#123;myUrl&#125;/logo.png"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">"http://www.baidu.com/img/logo.png"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>延迟加载</p>
+<ul>
+<li>变量是延迟加载的，在使用之前不一定要预先声明</li>
+<li>意思：变量使用可以在该变量定义之前</li>
+</ul>
+</li>
+</ol>
+<ol start="5">
+<li><p>定义多个相同名称的变量时</p>
+<ul>
+<li><p>在定义一个变量多次时，只会使用最后定义的变量，Less会从当前作用域中向上搜索，这个行为类似于Css的定义中始终使用最后定义的属性值。</p>
+</li>
+<li><p>例子</p>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//less编译</span></span><br><span class="line"><span class="variable">@var:</span> <span class="number">0</span>;</span><br><span class="line"><span class="selector-class">.class</span> &#123;</span><br><span class="line">  <span class="variable">@var:</span> <span class="number">1</span>;</span><br><span class="line">  <span class="selector-class">.brass</span> &#123;</span><br><span class="line">    <span class="variable">@var:</span> <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">three</span>: <span class="variable">@var</span>;</span><br><span class="line">    <span class="variable">@var:</span> <span class="number">3</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="attribute">one</span>: <span class="variable">@var</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.class</span> &#123;</span><br><span class="line">  <span class="attribute">one</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class</span> <span class="selector-class">.brass</span> &#123;</span><br><span class="line">  <span class="attribute">three</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h3><p><strong>什么是混合</strong></p>
+<p>混合就是一种将一系列属性从一个规则引入到另一个规则集的方式。</p>
+<ol>
+<li>普通混合</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div</span>&#123;</span><br><span class="line">    <span class="selector-class">.border</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后*/</span></span><br><span class="line"><span class="selector-class">.border</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>不带输出的混合</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border</span>()&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.div</span>&#123;</span><br><span class="line">    <span class="selector-class">.border</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后*/</span></span><br><span class="line"><span class="selector-class">.div</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>带选择器的混合</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.my-hover-mixin</span>&#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">        <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">button</span>&#123;</span><br><span class="line">    <span class="selector-class">.my-hover-mixin</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后*/</span></span><br><span class="line"><span class="selector-class">.my-hover-mixin</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.button</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>带参数的混合</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.my-hover-minxi</span>(<span class="variable">@color</span>)&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div2</span>&#123;</span><br><span class="line">    <span class="selector-class">.my-hover-minxi</span>(<span class="number">#f00</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.div2</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>带有参数并且有默认值</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.my-hover-minxi</span>(<span class="variable">@color</span>:red)&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div2</span>&#123;</span><br><span class="line">    <span class="selector-class">.my-hover-minxi</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.div2</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>带多个参数的混合</li>
+</ol>
+<ul>
+<li><p><strong>什么是多参数</strong></p>
+<ul>
+<li>一个组合可以带多个参数，参数之间可以用分号或者逗号分隔</li>
+<li>但是推荐使用分号分隔，因为逗号符号有两个意思。它可以解释为Mixins的分隔符和Css的列表分隔符</li>
+</ul>
+</li>
+<li><p><strong>官方阐述</strong></p>
+<ul>
+<li>两个参数，并且每个参数都是逗号分隔的列表：<code>name(1,2,3;something,ele)</code></li>
+<li>三个参数，并且每个参数都包含一个数字：<code>name(1,2,3)</code></li>
+<li>使用伪造的分号创建mixin，调用的时候参数包含一个逗号分隔的css列表：<code>name(1,2,3;)</code></li>
+<li>逗号分隔默认值：<code>.name(@param1:red,blue)</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@color</span>;<span class="variable">@padding</span>:xxx;<span class="variable">@margin</span>:<span class="number">2</span>)&#123;</span><br><span class="line">	<span class="attribute">color-3</span>:<span class="variable">@color</span>;</span><br><span class="line">	<span class="attribute">padding-3</span>:<span class="variable">@padding</span>;</span><br><span class="line">	<span class="attribute">margin</span>:<span class="variable">@margin</span> <span class="variable">@margin</span> <span class="variable">@margin</span> <span class="variable">@margin</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.divsss</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin</span>(red;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.divssss</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后*/</span></span><br><span class="line"><span class="selector-class">.divsss</span> &#123;</span><br><span class="line">  color-3: #ff0000;</span><br><span class="line">  <span class="selector-tag">padding-3</span>: <span class="selector-tag">xxx</span>;</span><br><span class="line">  <span class="selector-tag">margin</span>: 2 2 2 2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.divssss</span> &#123;</span><br><span class="line">  color-3: 1;</span><br><span class="line">  <span class="selector-tag">padding-3</span>: 2;</span><br><span class="line">  <span class="selector-tag">margin</span>: 3 3 3 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>结论：<ul>
+<li>如果传参的括号里面全都是以“,”分隔，那么会依次传给各个参数值</li>
+<li>如果传参的括号里面既有”,”，又有“;”，那么会将每个分号前面的参数当成一个整体传给各个参数值</li>
+</ul>
+</li>
+</ul>
+<ol start="7">
+<li>命名参数</li>
+</ol>
+<ul>
+<li><strong>什么是命名参数</strong><ul>
+<li>引用Mixin时可以通过参数名称而不是参数的位置来为mixin提供参数值，任何参数都可以通过它的名称来引用，这样就不洗按照任意特定的顺序使用参数。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin2</span>(<span class="variable">@color</span>:black;<span class="variable">@margin</span>:<span class="number">10px</span>;<span class="variable">@padding</span>:<span class="number">20px</span>)&#123;</span><br><span class="line">	<span class="attribute">color</span>:<span class="variable">@color</span>;</span><br><span class="line">	<span class="attribute">margin</span>:<span class="variable">@margin</span>;</span><br><span class="line">	<span class="attribute">padding</span>:<span class="variable">@padding</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.class1</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin2</span>(<span class="variable">@margin</span>:<span class="number">20px</span>;<span class="variable">@color</span>:<span class="number">#33acfe</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class2</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin2</span>(<span class="number">#33acfe</span>;<span class="variable">@padding</span>:<span class="number">40px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后*/</span></span><br><span class="line"><span class="selector-class">.class1</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#33acfe</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class2</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#33acfe</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li><code>@arguments</code>变量</li>
+</ol>
+<ul>
+<li><strong>什么是@argunebts变量</strong><ul>
+<li><code>@arguments</code>：代表所有可变参数是，参数的先后顺序就是你的()括号内的参数的先后顺序</li>
+<li>注意：在使用的赋值，值的位置和个数也是一一对应的，只有一个值，把值赋值给第一个，两个值，赋值给第一个和第二个，…以此类推。但是需要注意的是假如我想给第一个和第三个赋值时，你不能写<code>(值1,,值3)</code>，必须把原来的默认值写上去！</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border5</span>(<span class="variable">@x</span>:solid;<span class="variable">@c</span>:red)&#123;</span><br><span class="line">	<span class="attribute">border</span>:<span class="number">21px</span> <span class="variable">@arguments</span>;</span><br><span class="line">&#125;	</span><br><span class="line"><span class="selector-class">.div198209</span>&#123;</span><br><span class="line">	<span class="selector-class">.border5</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后*/</span></span><br><span class="line"><span class="selector-class">.div198209</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">21px</span> solid <span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>匹配模式</li>
+</ol>
+<ul>
+<li><strong>匹配模式</strong><ul>
+<li>说明：传值的时候定义一个字符，在使用的时候使用那个字符，就调用那条规则。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border7</span>(all,<span class="variable">@w</span>:<span class="number">5px</span>)&#123;</span><br><span class="line">	<span class="attribute">border-radius</span>:<span class="variable">@w</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.border7</span>(t_l,<span class="variable">@w</span>:<span class="number">5px</span>)&#123;</span><br><span class="line">	<span class="attribute">border-top-left-radius</span>:<span class="variable">@w</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.border7</span>(t_r,<span class="variable">@w</span>:<span class="number">5px</span>)&#123;</span><br><span class="line">	<span class="attribute">border-top-right-radius</span>:<span class="variable">@w</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.border7</span>(b_l,<span class="variable">@w</span>:<span class="number">5px</span>)&#123;</span><br><span class="line">	<span class="attribute">border-bottom-left-radius</span>:<span class="variable">@w</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.border7</span>(b_r,<span class="variable">@w</span>:<span class="number">5px</span>)&#123;</span><br><span class="line">	<span class="attribute">border-bottom-right-radius</span>:<span class="variable">@w</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div34</span>&#123;</span><br><span class="line">	<span class="selector-class">.border7</span>(all);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div35</span>&#123;</span><br><span class="line">	<span class="selector-class">.border7</span>(t_l,<span class="number">10px</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div36</span>&#123;</span><br><span class="line">	<span class="selector-class">.border7</span>(b_l,<span class="number">6px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后*/</span></span><br><span class="line"><span class="selector-class">.div34</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div35</span> &#123;</span><br><span class="line">  <span class="attribute">border-top-left-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div36</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom-left-radius</span>: <span class="number">6px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>得到混合中变量的返回值</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.average</span>(<span class="variable">@x</span>,<span class="variable">@y</span>)&#123;</span><br><span class="line">	<span class="variable">@average:</span>((<span class="variable">@x</span> + <span class="variable">@y</span>)/<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.dddd</span>&#123;</span><br><span class="line">	<span class="selector-class">.average</span>(<span class="number">5px</span>,<span class="number">7px</span>);</span><br><span class="line">	<span class="attribute">padding</span>:<span class="variable">@average</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译后*/</span></span><br><span class="line"><span class="selector-class">.dddd</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">6px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="11">
+<li>将规则集传递给Mixin</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#space</span>&#123;</span><br><span class="line">	<span class="selector-class">.importer-1</span>()&#123;</span><br><span class="line">		<span class="variable">@detached:</span>&#123;<span class="attribute">scoped-detached</span>:<span class="variable">@variable</span>;&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.importer-2</span>()&#123;</span><br><span class="line">	<span class="variable">@variable:</span>value;</span><br><span class="line">	<span class="selector-id">#space</span> &gt; <span class="selector-class">.importer-1</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.use-place</span>&#123;</span><br><span class="line">	<span class="selector-class">.importer-2</span>();</span><br><span class="line">	<span class="variable">@detached</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.use-place</span> &#123;</span><br><span class="line">  <span class="attribute">scoped-detached</span>: value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="嵌套规则（nested-rules）"><a href="#嵌套规则（nested-rules）" class="headerlink" title="嵌套规则（nested-rules）"></a>嵌套规则（<code>nested-rules</code>）</h3><ol>
+<li><p>什么是嵌套规则：嵌套规则它模仿了HTML的结构，让我们的css代码更加简洁明了清晰。</p>
+</li>
+<li><p>传统css</p>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">96px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">header</span> <span class="selector-tag">h1</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">    <span class="attribute">color</span>:green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">header</span> <span class="selector-class">.logo</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">background</span>:darkred;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>less写法</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">960px</span>;</span><br><span class="line">    <span class="selector-tag">h1</span>&#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">        <span class="attribute">color</span>:green;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.logo</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">        <span class="attribute">background</span>: darkblue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>父元素选择器：<code>&amp;</code></li>
+</ol>
+<ul>
+<li><p><strong>&amp;说明</strong>：表示当前选择器的所有父选择器</p>
+</li>
+<li><p>实例：</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*父元素选择器：&amp;*/</span></span><br><span class="line"><span class="selector-class">.header</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">960px</span>;</span><br><span class="line">    <span class="selector-tag">h1</span>&#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">        <span class="attribute">color</span>:green;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.logo</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">        <span class="attribute">background</span>: darkblue;</span><br><span class="line">        <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">            <span class="attribute">background</span>: darkred;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.header</span> <span class="selector-class">.logo</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">background</span>: darkblue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.header</span> <span class="selector-class">.logo</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: darkred;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>改变选择器的顺序</li>
+</ol>
+<ul>
+<li><p><strong>说明：</strong>：将&amp;放到当前选择器之后，就会将当前选择器插入到所有的父选择器之前。</p>
+</li>
+<li><p>实例</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span>&#123;</span><br><span class="line">	<span class="selector-tag">li</span>&#123;</span><br><span class="line">		<span class="selector-class">.content</span> <span class="selector-tag">&amp;</span>&#123;</span><br><span class="line">			<span class="attribute">color</span>:red;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.content</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>6.组合使用生成所有可能的选择器列表</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>,<span class="selector-tag">a</span>,<span class="selector-tag">ul</span>,<span class="selector-tag">li</span>&#123;</span><br><span class="line">	<span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">	<span class="selector-tag">&amp;</span> <span class="selector-tag">&amp;</span>&#123;</span><br><span class="line">		<span class="attribute">border</span>:none;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-tag">a</span>,</span><br><span class="line"><span class="selector-tag">ul</span>,</span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> <span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-tag">p</span> <span class="selector-tag">a</span>,</span><br><span class="line"><span class="selector-tag">p</span> <span class="selector-tag">ul</span>,</span><br><span class="line"><span class="selector-tag">p</span> <span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">a</span> <span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-tag">a</span> <span class="selector-tag">a</span>,</span><br><span class="line"><span class="selector-tag">a</span> <span class="selector-tag">ul</span>,</span><br><span class="line"><span class="selector-tag">a</span> <span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">a</span>,</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">ul</span>,</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">a</span>,</span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">ul</span>,</span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="运算（operations）"><a href="#运算（operations）" class="headerlink" title="运算（operations）"></a>运算（<code>operations</code>）</h3><ol>
+<li><strong>运算说明</strong>：任何数值，颜色和变量都可以进行运算</li>
+<li><strong>数值型运算</strong>：<ul>
+<li>less会为你自动推断数值的单位，所以你不必为每一个值都加上单位</li>
+<li>注意：运算符与值之间必须以空格分开，涉及优先级时以()进行优先级运算</li>
+<li>实例</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">900px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">800px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//涉及优先级</span></span><br><span class="line"><span class="selector-class">.wp1</span>&#123;</span><br><span class="line">   <span class="attribute">background</span>:green;</span><br><span class="line">   <span class="attribute">width</span>:(<span class="number">950px</span>-<span class="number">50</span>)*<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">900px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">800px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*涉及优先级*/</span></span><br><span class="line"><span class="selector-class">.wp1</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1800px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>颜色运算</li>
+</ol>
+<ul>
+<li><p>less在运算时，先将颜色转换为rgb模式，然后在转换为16进行的颜色值并返回</p>
+</li>
+<li><p>实例</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="number">#000000</span>+<span class="number">21</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.wp2</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#151515</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意是在转换为rgb模式，我们知道rgb的取值范围是0~255，所以我们计算的时候不能超过这个区间，超过后默认使用最大值255计算！</li>
+</ul>
+<h3 id="函数（functions）"><a href="#函数（functions）" class="headerlink" title="函数（functions）"></a>函数（<code>functions</code>）</h3><ol>
+<li><p>函数介绍：Less中提供了许多用于转换颜色、处理字符串和进行算术运算的函数，这些函数使用起来非常方便。</p>
+</li>
+<li><p>最常见的rgb()函数，将rgb模式的值转换为16进制的值。</p>
+</li>
+</ol>
+<h3 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h3><ol>
+<li><p>什么是命名空间：将一些需要的混合组合在一起，可以通过嵌套多层id或class来实现</p>
+</li>
+<li><p>例子</p>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#bgcolor</span>()&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="number">#ffffff</span>;</span><br><span class="line">	<span class="selector-class">.a</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:<span class="number">#888888</span>;</span><br><span class="line">		<span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">			<span class="attribute">color</span>:<span class="number">#FF6600</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="selector-class">.b</span>&#123;</span><br><span class="line">			<span class="attribute">background</span>:<span class="number">#ff0000</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bgcolor1</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="number">#fdfee0</span>;</span><br><span class="line">	<span class="selector-id">#bgcolor</span>&gt;<span class="selector-class">.a</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bgcolor2</span>&#123;</span><br><span class="line">	<span class="selector-id">#bgcolor</span>&gt;<span class="selector-class">.a</span>&gt;<span class="selector-class">.b</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.bgcolor1</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fdfee0</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#888888</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bgcolor1</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#FF6600</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bgcolor1</span> <span class="selector-class">.b</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bgcolor2</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>Less中的作用域与编程语言中的作用域概念非常相似，首先会在局部查找变量和混合，如果没找到，编译器就会在父作用域中查找，以此类推。</p>
+<h3 id="引入（important）"><a href="#引入（important）" class="headerlink" title="引入（important）"></a>引入（<code>important</code>）</h3><ol>
+<li>什么是引入：你可以引入一个或多个<code>.less</code>文件，然后这个文件中的所有变量都可以在当前的less项目中使用。</li>
+</ol>
+<h3 id="关键字（important）"><a href="#关键字（important）" class="headerlink" title="关键字（important）"></a>关键字（<code>important</code>）</h3><ol>
+<li><p>important关键字提高css的优先级</p>
+</li>
+<li><p>案例：</p>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.foo</span>(<span class="variable">@bg</span>:<span class="number">#f5f5f5</span>,<span class="variable">@color</span>:<span class="number">#900</span>)&#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="variable">@bg</span>;</span><br><span class="line">    <span class="attribute">color</span>:<span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.unimportant</span>&#123;</span><br><span class="line">    <span class="selector-class">.foo</span>()</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.important</span>&#123;</span><br><span class="line">    <span class="selector-class">.foo</span>() !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.unimportant</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f5f5f5</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#990000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.important</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f5f5f5</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#990000</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="条件表达式"><a href="#条件表达式" class="headerlink" title="条件表达式"></a>条件表达式</h3><ol>
+<li><p>带条件的混合</p>
+<ul>
+<li>比较运算符 ： &gt;、&gt;=、&lt;、&lt;=、=、true</li>
+<li>例子</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>) <span class="keyword">when</span>(lightness(<span class="variable">@a</span>) &gt;= <span class="number">50%</span>)&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>) <span class="keyword">when</span>(lightness(<span class="variable">@a</span>) &lt; <span class="number">50%</span>)&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>)&#123;</span><br><span class="line">	<span class="attribute">color</span>:<span class="variable">@a</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class1</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin</span>(<span class="number">#ddd</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class2</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin</span>(<span class="number">#555</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.class1</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: black;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#dddddd</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class2</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: white;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#555555</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>类型检查函数</li>
+</ol>
+<ul>
+<li><p>可以基于值的类型匹配函数</p>
+<ul>
+<li>iscolor</li>
+<li>isnumber</li>
+<li>isstring</li>
+<li>iskeyword</li>
+<li>isurl</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin1</span>(<span class="variable">@a</span>) <span class="keyword">when</span>(iscolor(<span class="variable">@a</span>))&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin1</span>(<span class="variable">@a</span>) <span class="keyword">when</span>(isnumber(<span class="variable">@a</span>))&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:white;</span><br><span class="line">	<span class="attribute">shuzi</span>:shuzi;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin1</span>(<span class="variable">@a</span>)&#123;</span><br><span class="line">	<span class="attribute">color</span>:<span class="variable">@a</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class3</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin1</span>(<span class="number">#ddd</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class4</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin1</span>(<span class="number">12</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class3</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: black;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#dddddd</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.class4</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: white;</span><br><span class="line">  <span class="attribute">shuzi</span>: shuzi;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">12</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>单位检查函数</li>
+</ol>
+<ul>
+<li><p>检查一个值除了数字是否一个特定的单位</p>
+<ul>
+<li>ispixel</li>
+<li>ispercentage</li>
+<li>isem</li>
+<li>isunit</li>
+</ul>
+</li>
+</ul>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>在less中，混合可以调用自身，这样，当一个混合递归调用自己，再结合Guard表达式和模式匹配这两个特性，就可以写出循环结构。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.loop</span>(<span class="variable">@counter</span>) <span class="keyword">when</span> (<span class="variable">@counter</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="selector-class">.loop</span>((<span class="variable">@counter</span> - <span class="number">1</span>));    <span class="comment">// next iteration</span></span><br><span class="line">  <span class="attribute">width</span>: (<span class="number">10px</span> * <span class="variable">@counter</span>); <span class="comment">// code for each iteration</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="selector-class">.loop</span>(<span class="number">5</span>); <span class="comment">// launch the loop</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并属性"><a href="#合并属性" class="headerlink" title="合并属性"></a>合并属性</h3><ol>
+<li>说明：在需要合并的属性的<code>:</code>前面加上<code>+</code>就可以完成合并，合并以<code>,</code>分割</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin3</span>()&#123;</span><br><span class="line">   <span class="selector-tag">box-shadow</span>+<span class="selector-pseudo">:insert</span> <span class="selector-tag">0</span> <span class="selector-tag">0</span> <span class="selector-tag">10px</span> <span class="selector-id">#555</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.myclass</span>&#123;</span><br><span class="line">   <span class="selector-class">.mixin3</span>();</span><br><span class="line">   <span class="selector-tag">box-shadow</span>+<span class="selector-pseudo">:0</span> <span class="selector-tag">0</span> <span class="selector-tag">20px</span> <span class="selector-tag">black</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.myclass</span> &#123;</span><br><span class="line">  <span class="attribute">box-shadow</span>: insert <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">#555</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>说明：在需要合并的属性的<code>:</code>前面加上<code>+_</code>就可以完成合并，合并以<code>空格</code>分割</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin</span>() &#123;</span><br><span class="line">  <span class="selector-tag">transform</span>+<span class="selector-tag">_</span>: <span class="selector-tag">scale</span>(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.myclass</span> &#123;</span><br><span class="line">  <span class="selector-class">.mixin</span>();</span><br><span class="line">  <span class="selector-tag">transform</span>+<span class="selector-tag">_</span>: <span class="selector-tag">rotate</span>(<span class="number">15deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.myclass</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(2) <span class="built_in">rotate</span>(15deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数库"><a href="#函数库" class="headerlink" title="函数库"></a>函数库</h3><ol>
+<li><p>其他函数</p>
+<ul>
+<li>color()函数：解析颜色，将代表颜色的字符串转换为颜色值</li>
+<li>convert()函数：将数字从一种类型转换到另一种类型</li>
+<li>data-url()函数：将一个资源内嵌到文件</li>
+<li>default()函数：只能在边界条件中使用，没有匹配到其他自定义函数（mixin）的时候返回True，否则返回false</li>
+<li>unit()函数：移除或者改变属性值的单位</li>
+</ul>
+</li>
+<li><p>字符串函数和长度相关函数</p>
+<ul>
+<li><p>escape()函数：将输入字符串中的url特殊字符进行编码处理。</p>
+</li>
+<li><p>e()函数：Css转义，用~”值”符号代替。</p>
+</li>
+<li><p>%()函数：函数%(string,arguments)格式化一个字符串。</p>
+</li>
+<li><p>replace()函数：用另一个字符串替换文本。</p>
+</li>
+<li><p>length()函数：集合中的值的条数</p>
+</li>
+<li><p>extract()函数：返回集合中指定索引的值</p>
+</li>
+</ul>
+</li>
+<li><p>数学函数</p>
+<ul>
+<li>ceil()函数：向上取整</li>
+<li>floor()函数：向下取整</li>
+<li>percentage()函数：将浮点数转换为百分数</li>
+<li>round()函数：取整和四舍五入</li>
+<li>sqrt()函数：计算一个数的平方根，保持原样单位</li>
+<li>abs()函数：计算一个数的绝对值，保持原样单位</li>
+<li>sin()函数：正弦函数</li>
+<li>asin()函数：反正弦函数</li>
+<li>cos()函数：余弦函数</li>
+<li>acos()函数：反余弦函数</li>
+<li>tan()函数：正切函数</li>
+<li>atan()函数：反正切函数</li>
+<li>pi()函数：Π</li>
+<li>pow()函数：乘方运算</li>
+<li>mod()函数：取余函数</li>
+<li>min()函数：最小值运算</li>
+<li>max()函数：最大值运算</li>
+</ul>
+</li>
+<li><p>类型函数</p>
+<ul>
+<li>isnumber()函数：判断参数是否是一个数值</li>
+<li>isstring()函数：判断参数是否是一个字符串</li>
+<li>iscolor()函数：判断参数是否是一个颜色值</li>
+<li>iskeyworld()函数：判断参数是否是一个关键字</li>
+<li>isurl()函数：判断参数是否是一个url</li>
+<li>ispixel()函数：判断参数的值是否带有像素的单位</li>
+<li>isem()函数：判断参数的值是否带有em的单位</li>
+<li>ispercentage()函数：判断参数的值是否为百分数</li>
+<li>isunit()函数：判断参数的值是否带有单位</li>
+</ul>
+</li>
+<li><p>颜色值定义函数</p>
+<ul>
+<li>rgb()函数：创建不透明的颜色对象</li>
+<li>rgba()函数：创建带alpha透明颜色</li>
+<li>argb()函数</li>
+<li>hsl()函数</li>
+<li>hsla()函数</li>
+<li>hsv()函数</li>
+<li>hsva()函数</li>
+</ul>
+</li>
+<li><p>颜色值通道函数</p>
+<ul>
+<li>hue()函数：hsl中的h的提取</li>
+<li>saturation()函数：hsl中s的提取</li>
+<li>lightness()函数：hsl中l的提取</li>
+<li>hsvhue()函数；hsv中h的提取</li>
+<li>hsvsaturation()函数：hsv中s的提取</li>
+<li>hasvalue()函数：hsv中v的提取</li>
+<li>red()函数：提取红色</li>
+<li>green()函数：提取绿色</li>
+<li>blue()函数：提取蓝色</li>
+<li>alpha()函数：提取透明度</li>
+<li>luma()函数：亮度的百分比表示法</li>
+<li>luminance()函数：计算没有伽马校正的亮度值</li>
+</ul>
+</li>
+<li><p>颜色值运算函数</p>
+<ul>
+<li>saturate()函数：增加一定数值的饱和度</li>
+<li>desaturate()函数：降低一定数值的饱和度</li>
+<li>lighten()函数：增加一定数值的亮度</li>
+<li>darken()函数：减少一定数值的亮度</li>
+<li>fadein()函数：降低颜色透明度</li>
+<li>fadeout()函数：增加颜色透明度</li>
+<li>fade()函数：给颜色设置一定数值的透明度</li>
+<li>spin()函数：任意方向旋转颜色的色相角度</li>
+<li>mix()函数：根据比例混合两种颜色，包括计算不透明度</li>
+<li>greyscale()函数：完全移除颜色的饱和度，与desaturate(@color,100%)函数效果相同</li>
+<li>contrast()函数：选择两种颜色比较，得出哪种颜色的对比度最大就倾向于对比度最大的颜色</li>
+</ul>
+</li>
+<li><p>颜色值混合函数</p>
+<ul>
+<li>multiply()函数</li>
+<li>screen()函数</li>
+<li>overlay()函数</li>
+<li>softlight()函数</li>
+<li>hardlight()函数</li>
+<li>difference()函数</li>
+<li>exclusion()函数</li>
+<li>average()函数</li>
+<li>negation()函数</li>
+</ul>
+</li>
+</ol>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>本文结束，感谢您的阅读</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">本文作者:</span><span class="copyright-value"><a href="http://qqqqyy.github.io">chuli</a></span></div><div class="copyright-link"><span class="copyright-name">本文链接:</span><span class="copyright-value"><a href="http://qqqqyy.github.io/2020/11/30/less/">http://qqqqyy.github.io/2020/11/30/less/</a></span></div><div class="copyright-notice"><span class="copyright-name">版权声明:</span><span class="copyright-value">本博客所有文章除特别声明外，均采用  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-footer-tags"><i class="fa fa-tags icon"></i><span><a href="http://qqqqyy.github.io/tags/less/" title="less">less</a></span></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2020/12/10/Java学习路线/"><i class="fa fa-chevron-left"></i><span class="title">Java学习路线</span></a></div><div class="article-next pull-right"><a href="/2020/11/11/vue-tabbar/"><span class="title">vue_tabbar</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2021</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>chuli.</span></div><div><span class="footer-powered">由 <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a> 强力驱动</span><span> v3.9.0.</span><span class="footer-separator">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.0.2.</span></div><div class="busuanzi"><script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js"></script><span class="busuanzi-uv"><i class="fa fa-user"></i><span>访问人数 </span><span id="busuanzi_value_site_uv"></span></span><span class="separator">|</span><span class="busuanzi-pv"><i class="fa fa-eye"></i><span>浏览总量 </span><span id="busuanzi_value_site_pv"></span></span></div></div></footer><div id="back-top"><div class="back-top-inner" title="回到顶部"><i class="fa fa-rocket"></i></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="/js/utils.js?v=1.0.2"></script><script src="/js/scroll.js?v=1.0.2"></script><script src="/js/header.js?v=1.0.2"></script><script src="/js/sidebar.js?v=1.0.2"></script><script src="/js/post.js?v=1.0.2"></script></body></html>

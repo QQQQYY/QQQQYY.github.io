@@ -1,0 +1,144 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="chuli, Possible'Blog"><meta name="author" content="chuli"><meta name="description" content="需求分析与系统设计"><meta name="copyright" content="chuli"><title>需求分析与系统设计 | Possible'Blog</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.0.2"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.0.2"><link rel="icon" type="image/png" sizes="16x16" href="http://img.mp.itc.cn/q_mini,c_zoom,w_640/upload/20161221/c495640d0fc24a91b9c95dc0d54b6002_th.jpeg?v=1.0.2"><script>let CONFIG = {
+  back2top_animation: true,
+  sidebar_offsetTop: '20px'
+};
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url(http://img.mp.itc.cn/upload/20170608/95f3e07d4113416c94081acd6268b294_th.jpg)"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-menu-icon fa fa-bars"></div><div class="header-nav-search"><i class="fa fa-search"></i><span>搜索</span></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>首页</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>归档</a></span><span><a href="/categories/"><i class="fa fa-categories"></i>分类</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>标签</a></span><span><a href="/about/"><i class="fa fa-about"></i>关于</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">Possible'Blog</div><div class="site-info-subtitle">学习使我快乐，不学习浑身难受</div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-overview">站点概览</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件需求与系统设计"><span class="toc-number">1.</span> <span class="toc-text">软件需求与系统设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键术语"><span class="toc-number">1.1.</span> <span class="toc-text">关键术语</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第1章-软件过程"><span class="toc-number">1.1.1.</span> <span class="toc-text">第1章 软件过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第2章-需求确定"><span class="toc-number">1.1.2.</span> <span class="toc-text">第2章 需求确定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第3章-可视化建模"><span class="toc-number">1.1.3.</span> <span class="toc-text">第3章 可视化建模</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第4章-需求规格说明"><span class="toc-number">1.1.4.</span> <span class="toc-text">第4章 需求规格说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第5章-从分析到设计"><span class="toc-number">1.1.5.</span> <span class="toc-text">第5章 从分析到设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第6章-系统体系结构与程序设计"><span class="toc-number">1.1.6.</span> <span class="toc-text">第6章 系统体系结构与程序设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第7章-图形用户界面设计"><span class="toc-number">1.1.7.</span> <span class="toc-text">第7章 图形用户界面设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第8章-持久性与数据库设计"><span class="toc-number">1.1.8.</span> <span class="toc-text">第8章 持久性与数据库设计</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="http://img.mp.itc.cn/q_mini,c_zoom,w_640/upload/20161221/c495640d0fc24a91b9c95dc0d54b6002_th.jpeg" alt="avatar"></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">26</div><div class="sidebar-state-item-name">文章</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">1</div><div class="sidebar-state-item-name">分类</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">6</div><div class="sidebar-state-item-name">标签</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>你已阅读了</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">需求分析与系统设计</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2021-01-17</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2021-01-17</span></span><span class="post-meta-reading-count"><i class="fa fa-eye"></i><span>阅读次数 </span><span id="busuanzi_value_page_pv"></span></span></div></div><div class="post-body"><h2 id="软件需求与系统设计"><a href="#软件需求与系统设计" class="headerlink" title="软件需求与系统设计"></a>软件需求与系统设计</h2><h3 id="关键术语"><a href="#关键术语" class="headerlink" title="关键术语"></a>关键术语</h3><h4 id="第1章-软件过程"><a href="#第1章-软件过程" class="headerlink" title="第1章 软件过程"></a>第1章 软件过程</h4><p><strong>Iteration(<font color="red">迭代</font>)</strong></p>
+<blockquote>
+<p>产生一个构造的软件开发或集成项目的一个循环。</p>
+</blockquote>
+<p><strong>Model(<font color="red">模型</font>)</strong></p>
+<blockquote>
+<p>来自现实的抽象，外部现实的某些方面在软件系统中的表现</p>
+</blockquote>
+<p><strong>Object(<font color="red">对象</font>)</strong></p>
+<blockquote>
+<p>能够响应外部事件/信息来执行软件系统所要求的任务的软件模块。它由数据和关联数据的操作组成。</p>
+</blockquote>
+<h4 id="第2章-需求确定"><a href="#第2章-需求确定" class="headerlink" title="第2章 需求确定"></a>第2章 需求确定</h4><p><strong>Business actor(<font color="red">业务参与者</font>)</strong></p>
+<blockquote>
+<p>人、组织单位、计算机系统、设备和其它种类的活动对象，他们能够和系统进行相互作用并且期望从相互作用中获取商业价值。</p>
+</blockquote>
+<p><strong>Business use case(<font color="red">业务用例</font>)</strong></p>
+<blockquote>
+<p>高层业务功能，功能性的系统特征。</p>
+</blockquote>
+<p><strong>Prototype(<font color="red">原型</font>)</strong></p>
+<blockquote>
+<p>解决方案的<code>快且脏</code>工作模型，表示用户图形界面(<code>GUI</code>)，并模拟不同用户事件的系统行为。</p>
+</blockquote>
+<h4 id="第3章-可视化建模"><a href="#第3章-可视化建模" class="headerlink" title="第3章 可视化建模"></a>第3章 可视化建模</h4><p><strong>Aggregation(<font color="red">聚合</font>)</strong></p>
+<blockquote>
+<p>说明聚合(整体)和组成成分之间的整体-部分关系的关联表。</p>
+</blockquote>
+<p><strong>Assocaition(<font color="red">关联</font>)</strong></p>
+<blockquote>
+<p>两个或多个分类符之间的语义关系，它包含类实例之间的连接。</p>
+</blockquote>
+<p><strong>Generalization(<font color="red">泛化</font>)</strong></p>
+<blockquote>
+<p>一个较一般分类符和一个较具体分类符之间的分类关系，具体分类符的每个实例也是一般分类符的非直接实例。因此具体分类符继承了较一般分类符的特性。</p>
+</blockquote>
+<p><strong>Lifeline(<font color="red">生命线</font>)</strong></p>
+<blockquote>
+<p>表示交互中的一个单独的参与者。</p>
+</blockquote>
+<h4 id="第4章-需求规格说明"><a href="#第4章-需求规格说明" class="headerlink" title="第4章 需求规格说明"></a>第4章 需求规格说明</h4><p><strong>Architectural framework(<font color="red">体系结构框架</font>)</strong></p>
+<blockquote>
+<p>具体参考软件体系结构元模型</p>
+</blockquote>
+<p><strong>Architectural meta-model(<font color="red">体系结构元模型</font>)</strong></p>
+<blockquote>
+<p>为软件体系结构定义框架的一个高层模型，具体的系统设计能够选择并遵照它。</p>
+</blockquote>
+<p><strong>CEP</strong></p>
+<blockquote>
+<p>PCBMER中的循环去除原则</p>
+</blockquote>
+<p><strong>CNP</strong></p>
+<blockquote>
+<p>PCBMER中的类命名原则</p>
+</blockquote>
+<p><strong>Component(<font color="red">构件</font>)</strong></p>
+<blockquote>
+<p>软件的一个可执行单元，具有明确定义的功能(服务)及其与其他构件的通信协议(接口);</p>
+</blockquote>
+<blockquote>
+<p>表示封装了其内容的系统模块，其表示在环境中是可替换的。</p>
+</blockquote>
+<p><strong>Subsystem(<font color="red">子系统</font>)</strong></p>
+<blockquote>
+<p>大系统中的一个层次分解单元；一种构件。</p>
+</blockquote>
+<h4 id="第5章-从分析到设计"><a href="#第5章-从分析到设计" class="headerlink" title="第5章 从分析到设计"></a>第5章 从分析到设计</h4><p><strong>Visibility(<font color="red">可见性</font>)</strong></p>
+<blockquote>
+<p>一个列举，它的值(公共、保护、私有或包)表示其所指的模型元素在其封闭名字空间之外是否能够可见。</p>
+</blockquote>
+<h4 id="第6章-系统体系结构与程序设计"><a href="#第6章-系统体系结构与程序设计" class="headerlink" title="第6章 系统体系结构与程序设计"></a>第6章 系统体系结构与程序设计</h4><p><strong>Chain of Responsibility(<font color="red">责任链</font>)</strong></p>
+<blockquote>
+<p>模式通过给多个对象处理请求的机会，避免了请求的发送者和接收者相耦合。</p>
+</blockquote>
+<p><strong>Component(<font color="red">构件</font>)</strong></p>
+<blockquote>
+<p>参考第1章和第3章关键术语component，系统设计的模块化部件，将实现隐藏在外部接口集合后面。</p>
+</blockquote>
+<p><strong>*Facade(<font color="red">外观</font>)</strong></p>
+<blockquote>
+<p>模式，定义“使子系统易于访问的高层接口”，并定义“子系统之间通信和依赖最小化”的目标。</p>
+</blockquote>
+<p><strong>Layer(<font color="red">层</font>)</strong></p>
+<blockquote>
+<p>体系结构层次中若干级别中的一个，类似于tier，但一般是指逻辑体系结构中级别</p>
+</blockquote>
+<p><strong>Tier(<font color="red">层</font>)</strong></p>
+<blockquote>
+<p>体系结构层次中若干级别中的一个，类似于Layer，但一般是指物理体系结构中级别。</p>
+</blockquote>
+<p><strong>Mediator(<font color="red">中介者</font>)</strong></p>
+<blockquote>
+<p>模式，“通过使对象彼此之间不显示引用，从而降低了耦合，此模式还可以让你改变它们的独立交互”。</p>
+</blockquote>
+<p><strong>Observer(<font color="red">观察者</font>)</strong></p>
+<blockquote>
+<p>类方法，获取对象的状态，但不更改它的状态。也称为getter(获取者)；</p>
+</blockquote>
+<p><strong>Observer pattern(<font color="red">观察者模式</font>)</strong></p>
+<blockquote>
+<p>“在对象之间定义一对多依赖，使得当其中一个对象状态更新时，所有依赖他的对象都得到通知，并自动更新。”</p>
+</blockquote>
+<h4 id="第7章-图形用户界面设计"><a href="#第7章-图形用户界面设计" class="headerlink" title="第7章 图形用户界面设计"></a>第7章 图形用户界面设计</h4><p><strong>Browser client(<font color="red">浏览器客户端</font>)</strong></p>
+<blockquote>
+<p>瘦客户端，展示基于Web的GUI，需要服务器来获得其数据和程序。</p>
+</blockquote>
+<p><strong>Container(<font color="red">容器</font>)</strong></p>
+<blockquote>
+<p>一个桌面GUI组件，可以是窗口、面板、窗格</p>
+</blockquote>
+<p><strong>Form(<font color="red">表单</font>)</strong></p>
+<blockquote>
+<p>网页的一部分，由输入域的集合组成</p>
+</blockquote>
+<p><strong>Frame(<font color="red">框架</font>)</strong></p>
+<blockquote>
+<p>包含网页或者是另外一个框架的矩形区域</p>
+</blockquote>
+<p><strong>Server page(<font color="red">服务器页面</font>)</strong></p>
+<blockquote>
+<p>一个网页，具有服务器执行的程序逻辑</p>
+</blockquote>
+<h4 id="第8章-持久性与数据库设计"><a href="#第8章-持久性与数据库设计" class="headerlink" title="第8章 持久性与数据库设计"></a>第8章 持久性与数据库设计</h4><p><strong>Data mapper(<font color="red">数据映射</font>)</strong></p>
+<blockquote>
+<p>定义了对象与数据库之间交换数据的映射层次，并且能够保证它们之间相互独立且与映射本身无关的一种模式。</p>
+</blockquote>
+<p><strong>Data model(<font color="red">数据模型</font>)</strong></p>
+<blockquote>
+<p>数据库中数据结构的模型，也可以定义行为结构。如：触发器和存储过程。</p>
+</blockquote>
+<p><strong>Normalization(<font color="red">范式化</font>)</strong></p>
+<blockquote>
+<p>设计能够避免更新异常的数据库表的过程</p>
+</blockquote>
+<p><strong>Object-relational mapping(<font color="red">对象-关系映射</font>)</strong></p>
+<blockquote>
+<p>能够将应用程序对象转换为关系数据库或将关系数据库转换为应用程序对象的工具或软件。</p>
+</blockquote>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>本文结束，感谢您的阅读</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">本文作者:</span><span class="copyright-value"><a href="http://qqqqyy.github.io">chuli</a></span></div><div class="copyright-link"><span class="copyright-name">本文链接:</span><span class="copyright-value"><a href="http://qqqqyy.github.io/2021/01/17/需求分析与系统设计/">http://qqqqyy.github.io/2021/01/17/需求分析与系统设计/</a></span></div><div class="copyright-notice"><span class="copyright-name">版权声明:</span><span class="copyright-value">本博客所有文章除特别声明外，均采用  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-footer-tags"><i class="fa fa-tags icon"></i><span><a href="http://qqqqyy.github.io/tags/需求分析与系统设计/" title="需求分析与系统设计">需求分析与系统设计</a></span></div><nav id="paginator"><div class="post-paginator"><div class="article-next pull-right"><a href="/2020/12/10/Java学习路线/"><span class="title">Java学习路线</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2021</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>chuli.</span></div><div><span class="footer-powered">由 <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a> 强力驱动</span><span> v3.9.0.</span><span class="footer-separator">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.0.2.</span></div><div class="busuanzi"><script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js"></script><span class="busuanzi-uv"><i class="fa fa-user"></i><span>访问人数 </span><span id="busuanzi_value_site_uv"></span></span><span class="separator">|</span><span class="busuanzi-pv"><i class="fa fa-eye"></i><span>浏览总量 </span><span id="busuanzi_value_site_pv"></span></span></div></div></footer><div id="back-top"><div class="back-top-inner" title="回到顶部"><i class="fa fa-rocket"></i></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="/js/utils.js?v=1.0.2"></script><script src="/js/scroll.js?v=1.0.2"></script><script src="/js/header.js?v=1.0.2"></script><script src="/js/sidebar.js?v=1.0.2"></script><script src="/js/post.js?v=1.0.2"></script></body></html>
